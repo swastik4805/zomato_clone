@@ -12,7 +12,7 @@ export function Searchbar({label}){
             
             </div>
             <input type="search" id="default-search" 
-            style={{ width: '700px', height: '40px' }}
+            style={{ width: '500px', height: '40px' }}
             className="block w-full p-4 ps-10 text-sm text-gray-900 rounded-lg dark:text-white " 
             placeholder={label} required/>
         </div>

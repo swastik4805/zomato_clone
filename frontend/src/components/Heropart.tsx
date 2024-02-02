@@ -3,7 +3,8 @@ import { Searchbar } from './Searchbar'
 
 export function Heropart(){
     return(
-        <div className="bg-[url('./assets/hero.jpg')] p-4 pt-20">
+        <div className='flex justify-center'>
+        <div style={{width:'100%'}} className="bg-[url('./assets/hero.jpg')] p-4 pt-20 ">
             <div className="h-20 flex justify-center pb-4">
                 <img src={logo}></img>
             </div>
@@ -13,6 +14,7 @@ export function Heropart(){
             <div className="flex justify-center pt-8 pb-6">
                 <Searchbar label="Search for restautant"></Searchbar>
             </div>
+        </div>
         </div>
     )
 }

@@ -1,13 +1,18 @@
 import { CollectionsCard } from "../miniComponents/CollectionsCard";
 import { useMediaQuery } from 'react-responsive';
-
+import { BrowserRouter as Router, Route, Link, useNavigate } from "react-router-dom";
+import { BestLuxuryDiningPLaces } from "../pages/BestLuxuryDiningPlaces";
 export function Collections(){
+    const navigate=useNavigate();
     return(
-        <div className="p-4 grid grid-cols-2 md:grid-cols-4">
+        
+        <div className="p-4 grid grid-cols-2 md:grid-cols-4" >
             <div className="p-4">
-                <div className="bg-[url('./assets/coll1.jpg')] pt-12 bg-cover bg-center bg-no-repeat rounded-md">
+                <div className="bg-[url('./assets/coll1.jpg')] pt-12 bg-cover bg-center bg-no-repeat rounded-md"
+                onClick={()=>{
+                    navigate("/BestLuxuryDiningPlaces");
+                }}>
                     <div className='pt-48'>
-
                         <div className='shadow-xl bg-gradient-to-t from-black rounded-md'>
                             <div className='text-white text-xl px-4'>
                                 <FirstLabel sentence={"7 Best Luxury Dining Places"}></FirstLabel>
@@ -124,6 +129,7 @@ export function Collections(){
                 </div>
             </div>
         </div>
+    
     )
 }
 

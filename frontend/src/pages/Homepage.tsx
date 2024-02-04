@@ -8,6 +8,7 @@ import {Collections} from  '../components/Collections'
 
 export function Homepage(){
     return(
+    
         <div>
             {/* <div className='bg-red-300'>hello</div> */}
             <Heropart></Heropart>
@@ -16,5 +17,6 @@ export function Homepage(){
             <ExploreOptions></ExploreOptions>
             <Footer></Footer>
         </div>
+    
     )
 }

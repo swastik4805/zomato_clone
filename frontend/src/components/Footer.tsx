@@ -19,7 +19,7 @@ export function Footer(){
             <br></br>
             <br></br>
             <div>
-                <div className="flex justify-center">
+                <div className="flex justify-center pb-4">
                     <div className="px-4"><Lists title={"ABOUT ZOMATO"} list={list1}></Lists></div>
                     <div className="px-4"><Lists title={"ZOOMAVERSE"} list={list2}></Lists></div>
 
@@ -32,6 +32,10 @@ export function Footer(){
 
                     <FooterSocial></FooterSocial>
                 </div>
+            </div>
+            <br></br>
+            <div className="text-sm text-gray-400 p-4">
+            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.
             </div>
         </div>
     )

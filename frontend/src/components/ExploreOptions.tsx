@@ -3,7 +3,7 @@ import { DropDownMenu } from "../miniComponents/DropDownList";
 import cities from "../../../backend/City_db"
 import popularRestaurant from "../../../backend/PopularRestaurant_db"
 import popularCuisines from "../../../backend/PopularCuisines"
-
+//this is the drop down menus
 export function ExploreOptions(){
     
     return(

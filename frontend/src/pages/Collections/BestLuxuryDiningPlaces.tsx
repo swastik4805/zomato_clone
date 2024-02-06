@@ -8,11 +8,13 @@ import { Footer } from "../../components/Footer";
 
 export function BestLuxuryDiningPLaces(){
     return(
-        <div className="flex">
+        <div>
+        <Appbar></Appbar>
+        <div className="flex pt-2">
             <div className=" md:w-2/12"></div>
 
             <div className="md:w-8/12">
-                <Appbar></Appbar>
+                
                 <div className="bg-[url('./assets/coll1.jpg')]">
 
                     <div className="p-4 pb-6 shadow-xl bg-gradient-to-t from-black rounded-md">
@@ -36,6 +38,7 @@ export function BestLuxuryDiningPLaces(){
 
             </div>
             <div className="md:w-2/12"></div>
+        </div>
         </div>
     )
 }

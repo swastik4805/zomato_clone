@@ -23,21 +23,23 @@ export function RestaurantName(){
         )
     }
     return(
+        <div>
+        <Appbar></Appbar>
         <div className="flex">
             <div className=" md:w-2/12"></div>
 
 
 
-
+        
             <div className="md:w-8/12">
-                <Appbar></Appbar>
+                
                 <br></br>
                 <img src={restaurant.img}></img>
                 <br></br>
 
 
                 <div className="pl-3">
-                    <div className=" top-70 w-full">
+                    <div className=" top-70 w-full shadow">
                         <div className="flex justify-between">
                             <div className="font-semibold text-4xl">
                                 {restaurant.name}
@@ -82,10 +84,11 @@ export function RestaurantName(){
                             <RenderReviewHighlights prop={restaurantName}></RenderReviewHighlights>
                             <AreYouAFoodBlogger></AreYouAFoodBlogger>
                             <HelpUsMakeZomatoBetter></HelpUsMakeZomatoBetter>
+
+                            <FrequentSearches></FrequentSearches>
                         </div>
                         <div className="flex w-1/3">
                             {/* here the map will go*/}
-                            {/* <img style={{height:'100px'}}src={coll1}></img> */}
                             <RenderMapComponent prop={restaurantName}></RenderMapComponent>
                         </div>
                     </div>
@@ -97,10 +100,12 @@ export function RestaurantName(){
                 {/* <ExploreOptions></ExploreOptions> */}
 
                 <br></br>
-                <Footer></Footer>
+                
 
             </div>
             <div className="md:w-2/12"></div>
+        </div>
+        <Footer></Footer>
         </div>
     )
 }
@@ -244,7 +249,7 @@ function HelpUsMakeZomatoBetter(){
     return(
         <div className="pt-8">
             <div className="rounded-lg shadow">
-            <div className="flex pb-2">
+            <div className="flex flex-wrap pb-2">
                 <div className="pr-6">H E L P</div>
                 <div className="pr-6">U S</div>
                 <div className="pr-6">M A K E</div>
@@ -258,7 +263,7 @@ function HelpUsMakeZomatoBetter(){
                 
                 
             </div>
-            <div className="text-sm text-gray-300  px-2">
+            <div className="text-sm text-gray-400  px-2">
                 Help us make Zomato more updated and relevant for everyone
             </div>
             <div className="text-red-400 pt-2 pb-2  px-2">
@@ -274,7 +279,7 @@ function HelpUsMakeZomatoBetter(){
                 
                 
             </div>
-            <div className="text-sm text-gray-300 px-2">
+            <div className="text-sm text-gray-400 px-2">
             Claim this listing to get access to a free management and analytics dashboard, where you can edit information, track your page views, and more.
             </div>
             <div className="text-red-400 pt-2 pb-2  px-2">
@@ -357,6 +362,26 @@ function OurSponcers(){
                     imgURL={"https://b.zmtcdn.com/data/reviews_photos/af6/cbb895c6c6460b143295f8144ddf2af6_1676609898.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"}
                     ></CollectionsCardSmall>
                 </div>
+            </div>
+        </div>
+    )
+}
+
+function FrequentSearches(){
+    return(
+        <div>
+            <div className="text-lg">
+            RELATED TO FAT TIGER
+            </div>
+            <div className="flex flex-wrap text-gray-400 text-sm pt-2">
+            Restaurants in Bhubaneshwar, Bhubaneshwar Restaurants, Patia restaurants, Best Patia restaurants, Bhubaneshwar City restaurants, Beverage Shop in Bhubaneswar, Beverage Shop near me, Beverage Shop in Patia, Quick Bites in Bhubaneswar, Quick Bites near me, Quick Bites in Patia, Order food online in Patia, Order food online in Bhubaneswar
+            </div>
+
+            <div className="text-lg pt-4">
+            FREQUENT SEARCHES LEADING TO THIS PAGE
+            </div>
+            <div className="flex flex-wrap text-gray-400 text-sm pt-2">
+            fat tiger menu, fat tiger patia menu, fat tiger bhubaneshwar, fat tiger bhubaneshwar menu, fat tiger restaurant
             </div>
         </div>
     )

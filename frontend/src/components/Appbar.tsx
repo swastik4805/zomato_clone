@@ -1,23 +1,38 @@
+import { useNavigate } from "react-router-dom";
 import zomato from "../assets/zomatoInBlack.png"
 
 
 export function Appbar(){
+  const navigate=useNavigate();
     return(
-        <div>
-            <div  className="flex ">
+        <div className="shadow-md">
+            <div  className="flex justify-between pb-2">
 
-                <div className="pt-3 pl-4 w-1/6">
+                <div className="pt-3 pl-4 w-1/6 cursor-pointer"
+                onClick={()=>{
+                  navigate("/")
+                }}>
                     <img style={{width:'100px'}} src={zomato}></img>
                 </div>
 
-                <div className="w-4/6">
+                <div className="pl-1 w-4/6 shadow rounded-xl">
                     <Searchbar></Searchbar>
                 </div>
 
                 <div className="w-1/6">
                     <div className="flex">
-                        <div>Login</div>
-                        <div>Signin</div>
+                        <div className="text-md text-gray-400 pt-3 pl-2 cursor-pointer"
+                        onClick={()=>{
+                          alert("hi! This is just a dummy!")
+                        }}>
+                          Log in
+                        </div>
+                        <div className="text-md text-gray-400 pt-3 pl-2 cursor-pointer"
+                        onClick={()=>{
+                          alert("Hi! This is just a dummy!")
+                        }}>
+                          Sign up
+                        </div>
                     </div>
                 </div>
 

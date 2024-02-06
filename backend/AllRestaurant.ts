@@ -431,7 +431,7 @@ export const AllRestaurants=[{
     address:"G-51, 4th Floor, Ward 6, Chandrasekharpur, Bhubaneshwar",
     showInMap:"https://www.google.com/maps/dir/?api=1&destination=20.3384383000,85.8218750000",
     menuImage1:"https://b.zmtcdn.com/data/menus/616/18821616/f7423adc5046aad23815f1158d262b11.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
-    img: "https://b.zmtcdn.com/data/menus/616/18821616/8763f97e8a28e6217f669648c555a5ac.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    img: "https://b.zmtcdn.com/data/pictures/chains/6/18821616/28938a2bbbcc255c7c33cdcdc71947fc.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
     Cuisines: ["North Indian",
     "Chinese",
     "Continental",

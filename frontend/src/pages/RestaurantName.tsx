@@ -29,54 +29,55 @@ export function RestaurantName(){
                 <br></br>
 
 
+                <div className="pl-3">
+                    <div className=" top-70 w-full">
+                        <div className="flex justify-between">
+                            <div className="font-semibold text-4xl">
+                                {restaurant.name}
+                            </div>
+                            <div className="pt-4 flex">
+                                <div><StarRating num={restaurant.rating}></StarRating></div>
+                                <div className="text-sm text-gray-500 px-2"> Dining Rating</div>
+                            </div>
+                        </div>
+                        <div className="text-gray-500 pt-4">
+                            {restaurant.desc}
+                        </div>
+                        <div className="text-gray-400">
+                            {restaurant.address}
+                        </div>
+                        <div className="flex pt-2">
+                        <div className="text-red-300 pr-3"> Open Now </div>
+                        <div>11:30am – 11pm (Today)</div>
+                        </div>
+                    </div>
 
-                <div className=" top-70 w-full">
-                    <div className="flex justify-between">
-                        <div className="font-semibold text-4xl">
-                            {restaurant.name}
+
+
+
+                    <div className="flex pt-8">
+                        <div className="w-2/3 overflow-y-auto no-scrollbar" style={{ maxHeight: '100vh' }}>
+                            <div>Menu</div>
+                            <div className="flex">
+                                <div><img className="rounded-lg pr-6" src={restaurant.menuImage1}></img></div>
+                                <div><img src={restaurant.menuImage2}></img></div>
+                            </div>
+                            
+                            <RenderCuisines prop={restaurantName}></RenderCuisines>
+                            <RenderWhatPeopleSay prop={restaurantName}></RenderWhatPeopleSay>
+                            <RenderAverageCost prop={restaurantName}></RenderAverageCost>
+                            <RenderMoreInfo prop={restaurantName}></RenderMoreInfo>
+                            <RenderReviewHighlights prop={restaurantName}></RenderReviewHighlights>
+                            <AreYouAFoodBlogger></AreYouAFoodBlogger>
+                            <HelpUsMakeZomatoBetter></HelpUsMakeZomatoBetter>
                         </div>
-                        <div className="pt-4 flex">
-                            <div><StarRating num={restaurant.rating}></StarRating></div>
-                            <div className="text-sm text-gray-500 px-2"> Dining Rating</div>
+                        <div className="flex w-1/3">
+                            {/* here the map will go*/}
+                            {/* <img style={{height:'100px'}}src={coll1}></img> */}
+                            <RenderMapComponent prop={restaurantName}></RenderMapComponent>
                         </div>
-                    </div>
-                    <div className="text-gray-500 pt-4">
-                        {restaurant.desc}
-                    </div>
-                    <div className="text-gray-400">
-                        {restaurant.address}
-                    </div>
-                    <div className="flex pt-2">
-                    <div className="text-red-300 pr-3"> Open Now </div>
-                    <div>11:30am – 11pm (Today)</div>
                     </div>
                 </div>
-
-
-
-
-                <div className="flex pt-8">
-                    <div className="w-2/3 overflow-y-auto no-scrollbar" style={{ maxHeight: '100vh' }}>
-                        <div>Menu</div>
-                        <div className="flex">
-                            <div><img className="rounded-lg pr-6" src={restaurant.menuImage1}></img></div>
-                            <div><img src={restaurant.menuImage2}></img></div>
-                        </div>
-                        
-                        <RenderCuisines prop={restaurantName}></RenderCuisines>
-                        <RenderWhatPeopleSay prop={restaurantName}></RenderWhatPeopleSay>
-                        <RenderAverageCost prop={restaurantName}></RenderAverageCost>
-                        <RenderMoreInfo prop={restaurantName}></RenderMoreInfo>
-                        <RenderReviewHighlights prop={restaurantName}></RenderReviewHighlights>
-                        <HelpUsMakeZomatoBetter></HelpUsMakeZomatoBetter>
-                    </div>
-                    <div className="flex w-1/3">
-                        {/* here the map will go*/}
-                        {/* <img style={{height:'100px'}}src={coll1}></img> */}
-                        <RenderMapComponent prop={restaurantName}></RenderMapComponent>
-                    </div>
-                </div>
-
                 
                 {/* <ExportRestLisy></ExportRestLisy> */}
 
@@ -102,7 +103,7 @@ function RenderCuisines({prop}){
             Cuisines
         </div>
         {arr.length > 0 ? (
-            <div className="flex">
+            <div className="flex flex-wrap">
             {arr.map((cuisine, index) => (
                 <div className="pt-2 pr-2">
                     <div key={index} className=" rounded-3xl p-1 border-solid border-2 border-black-200 text-green-700 text-sm">
@@ -192,7 +193,7 @@ function RenderReviewHighlights({prop}){
 
         </div>
         {arr.length > 0 ? (
-            <div className="flex flex-row">
+            <div className="flex flex-wrap">
             {arr.map((x, index) => (
                 <div className="pt-2 pr-2">
                     <div key={index} className="rounded-3xl p-1 border-solid border-2 border-black-200 text-green-700 text-sm">
@@ -244,37 +245,51 @@ function HelpUsMakeZomatoBetter(){
                 <div className="pr-6">Z O M A T O</div>
                 <div>B E T T E R</div>
             </div>
-            <div className="text-xl font-semibold">
+            <div className="text-xl font-semibold  px-2">
                 Report an error in this listing
             </div>
             <div className="text-md text-gray-400 pt-2">
                 
                 
             </div>
-            <div className="text-sm text-gray-300">
+            <div className="text-sm text-gray-300  px-2">
                 Help us make Zomato more updated and relevant for everyone
             </div>
-            <div className="text-red-400 pt-2 pb-2">
+            <div className="text-red-400 pt-2 pb-2  px-2">
                 Report now
             </div>
             </div>
 
             <div className="rounded-lg shadow pt-4">
-            <div className="text-xl font-semibold">
+            <div className="text-xl font-semibold  px-2">
                 Claim this listing
             </div>
             <div className="text-md text-gray-400 pt-2">
                 
                 
             </div>
-            <div className="text-sm text-gray-300">
+            <div className="text-sm text-gray-300 px-2">
             Claim this listing to get access to a free management and analytics dashboard, where you can edit information, track your page views, and more.
             </div>
-            <div className="text-red-400 pt-2 pb-2">
+            <div className="text-red-400 pt-2 pb-2  px-2">
                 Claim now
             </div>
             </div>
             <br></br>
+        </div>
+    )
+}
+
+
+function AreYouAFoodBlogger(){
+    return(
+        <div className="py-6">
+            <div className="bg-gray-100 rounded-lg" style={{width:'350px'}}>
+                <div className="p-4">
+                    <div>Are you a food blogger</div>
+                    <a className="text-red-400" style={{display: "table-cell"}} href="https://www.zomato.com/spoonbacks/19267065" target="_blank">Add a Zomato spoonback to your blog</a>
+                </div>
+            </div>
         </div>
     )
 }

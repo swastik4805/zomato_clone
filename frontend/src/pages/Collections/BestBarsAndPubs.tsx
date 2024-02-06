@@ -1,6 +1,6 @@
 import { Appbar } from "../../components/Appbar";
 import { CollectionsCardSmall } from "../../miniComponents/CollectionsCardSmall";
-import RestDetails from "../../../../backend/Collections/CollectionsSub/BestLuxuryDiningComp"
+import RestDetails from "../../../../backend/Collections/CollectionsSub/BestBarsAndPubs"
 import { ExploreOptions } from "../../components/ExploreOptions";
 import { Footer } from "../../components/Footer";
 
@@ -14,10 +14,9 @@ export function BestBarsAndPubs(){
             <div className="md:w-8/12">
                 <Appbar></Appbar>
                 <div className="bg-[url('./assets/coll2.jpg')]">
-
                     <div className="p-4 pb-6 shadow-xl bg-gradient-to-t from-black rounded-md">
                         <div className="pt-48 text-3xl text-white">
-                            7 Best Luxury Dining Places
+                            16 Best Bars & Pubs
                         </div>
                         <div className="text-white">
                         Restaurants that are unmatched on multiple fronts with luxurious indoor settings and extravagant menus
@@ -39,9 +38,6 @@ export function BestBarsAndPubs(){
         </div>
     )
 }
-
-
-
 function ExportRestList(){
     return(
         <div className="grid grid-cols-2 md:grid-cols-4">
@@ -51,6 +47,7 @@ function ExportRestList(){
                     rating={x.rating}
                     desc={x.desc}
                     imgURL={x.img}
+                    linkTo={`/restaurant/${x.title}`}
                     ></CollectionsCardSmall>
                 </div>
             ))}

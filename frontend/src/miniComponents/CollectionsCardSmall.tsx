@@ -1,11 +1,16 @@
 // import coll1 from "../assets/coll1.jpg"
+import { useNavigate } from "react-router-dom"
 import { StarRating } from "./StarRating"
 
 
-export function CollectionsCardSmall({title,rating,desc, imgURL}){
+export function CollectionsCardSmall({title,rating,desc, imgURL, linkTo}){
+    const navigate=useNavigate();
     return(
+        
         <div>
-            <div>
+            <div onClick={()=>{
+                navigate(linkTo)
+            }}>
                 <img src={imgURL} className="rounded-md"></img> 
                 <div className="text-sm font-semibold">
                     {title}

@@ -51,8 +51,9 @@ export function RestaurantName(){
                         <RenderAverageCost prop={restaurantName}></RenderAverageCost>
                         <RenderMoreInfo prop={restaurantName}></RenderMoreInfo>
                         <RenderReviewHighlights prop={restaurantName}></RenderReviewHighlights>
+                        <HelpUsMakeZomatoBetter></HelpUsMakeZomatoBetter>
                     </div>
-                    <div className="flex w-1/3 overflow-hidden">
+                    <div className="flex w-1/3">
                         {/* here the map will go*/}
                         {/* <img style={{height:'100px'}}src={coll1}></img> */}
                         <RenderMapComponent prop={restaurantName}></RenderMapComponent>
@@ -170,7 +171,8 @@ function RenderReviewHighlights({prop}){
     return(
         <div>
         <div className="text-xl pt-8">
-            Cuisines
+            Review Highlights
+
         </div>
         {arr.length > 0 ? (
             <div className="flex flex-row">
@@ -196,18 +198,66 @@ function RenderMapComponent({prop}){
 
     return(
         <div className="bg-gray-100 p-4 rounded-xl shadow-lg"
-        style={{height:'350px'}}>
-            <div>Call</div>
+        style={{height:'400px'}}>
+            <div className="pt-3 text-xl pb-2">Call</div>
             {phoneNumber?.map((x,index)=>(
                 <div className="text-red-400">{x}</div>
             ))}
-            <div className="pt-4">Directions</div>
+            <div className="pt-4 text-xl pb-2">Directions</div>
             <img src={"https://maps.zomato.com/php/staticmap?center=20.2844157098,85.8347158134&maptype=zomato&markers=20.2844157098,85.8347158134,pin_res32&sensor=false&scale=2&zoom=16&language=en&size=240x150&size=400x240&size=650x250"}></img>
             <div>{restaurant.address}</div>
             <div className="flex justify-between pt-6">
                 <button className="bg-white px-3 py-1 rounded-lg border-solid shadow">Copy</button>
                 <button className="bg-white px-3 py-1 rounded-lg border-solid shadow">Directions</button>
             </div>
+        </div>
+    )
+}
+
+
+
+function HelpUsMakeZomatoBetter(){
+    return(
+        <div className="pt-8">
+            <div className="rounded-lg shadow">
+            <div className="flex pb-2">
+                <div className="pr-6">H E L P</div>
+                <div className="pr-6">U S</div>
+                <div className="pr-6">M A K E</div>
+                <div className="pr-6">Z O M A T O</div>
+                <div>B E T T E R</div>
+            </div>
+            <div className="text-xl font-semibold">
+                Report an error in this listing
+            </div>
+            <div className="text-md text-gray-400 pt-2">
+                
+                
+            </div>
+            <div className="text-sm text-gray-300">
+                Help us make Zomato more updated and relevant for everyone
+            </div>
+            <div className="text-red-400 pt-2 pb-2">
+                Report now
+            </div>
+            </div>
+
+            <div className="rounded-lg shadow pt-4">
+            <div className="text-xl font-semibold">
+                Claim this listing
+            </div>
+            <div className="text-md text-gray-400 pt-2">
+                
+                
+            </div>
+            <div className="text-sm text-gray-300">
+            Claim this listing to get access to a free management and analytics dashboard, where you can edit information, track your page views, and more.
+            </div>
+            <div className="text-red-400 pt-2 pb-2">
+                Claim now
+            </div>
+            </div>
+            <br></br>
         </div>
     )
 }

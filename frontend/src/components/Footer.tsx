@@ -1,6 +1,7 @@
 import { FooterSocial } from "./footerSubParts/FooterSocial";
 import { Lists } from "./footerSubParts/Lists";
 import zomato from "../assets/zomatoInBlack.png"
+import { DropDown } from "./footerSubParts/DropDown";
 
 export function Footer(){
     const list1=["who we are","blog","work with us","invstor relations", "Report Fraud","press Kit","Contact us"]
@@ -13,7 +14,9 @@ export function Footer(){
         <div className="bg-gray-100 pt-6">
             <div className="flex justify-between px-4">
                 <div style={{width:'150px'}}><img src={zomato}></img></div>
-                <div>India  English</div>
+                <div>
+                    <DropDown></DropDown>
+                </div>
             </div>
 
             <br></br>

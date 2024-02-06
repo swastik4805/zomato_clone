@@ -8,7 +8,7 @@ export function Lists({title, list}){
 
             <div>
             {list.map((x, index) => (
-                <div className="text-base text-gray-400" key={index}>{x}</div>
+                <div className="text-base text-gray-400 text-sm" key={index}>{x}</div>
             ))}
             </div>
         </div>

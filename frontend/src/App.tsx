@@ -10,6 +10,7 @@ import { RestaurantName } from './pages/RestaurantName'
 import { CollectionName } from './pages/CollectionName'
 import { PlacesForAuthenticOdiaCuisine } from './pages/Collections/PlacesForAuthenticOdiaCuisine'
 import { SereneRooftopPlaces } from './pages/Collections/SereneRooftopPlaces'
+import { ClassicBiryaniPlaces } from './pages/Collections/ClassicBiryaniPlaces'
 
 function App() {
 
@@ -22,7 +23,9 @@ function App() {
       <Route path="/BestBarsAndPubs" element={<BestBarsAndPubs/>}></Route>
       <Route path="/PlacesForAuthenticOdiaCuisine" element={<PlacesForAuthenticOdiaCuisine></PlacesForAuthenticOdiaCuisine>}></Route>
       <Route path="/SereneRooftopPlaces" element={<SereneRooftopPlaces></SereneRooftopPlaces>}></Route>
-      
+      <Route path='/ClassicBiryaniPlaces' element={<ClassicBiryaniPlaces></ClassicBiryaniPlaces>}></Route>
+
+
       {/* <Route path="/:collectionName" element={<CollectionName title1={" Best Luxury Dining Places"}
       title2={"Restaurants that are unmatched on multiple fronts with luxurious indoor settings and extravagant menus"}></CollectionName>}></Route> */}
       <Route path="/restaurant/:restaurantName" element={<RestaurantName/>}></Route>

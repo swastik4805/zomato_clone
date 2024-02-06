@@ -3,6 +3,7 @@ import {AllRestaurants} from "../../../backend/AllRestaurant"
 import { Appbar } from "../components/Appbar";
 import { Footer } from "../components/Footer";
 import coll1 from "../assets/coll1.jpg"
+import { StarRating } from "../miniComponents/StarRating";
 
 export function RestaurantName(){
     const {restaurantName}=useParams();
@@ -18,25 +19,41 @@ export function RestaurantName(){
         <div className="flex">
             <div className=" md:w-2/12"></div>
 
+
+
+
             <div className="md:w-8/12">
                 <Appbar></Appbar>
                 <br></br>
                 <img src={restaurant.img}></img>
                 <br></br>
-                <div className="font-semibold text-4xl">
-                    {restaurant.name}
+
+
+
+                <div className=" top-70 w-full">
+                    <div className="flex justify-between">
+                        <div className="font-semibold text-4xl">
+                            {restaurant.name}
+                        </div>
+                        <div className="pt-4 flex">
+                            <div><StarRating num={restaurant.rating}></StarRating></div>
+                            <div className="text-sm text-gray-500 px-2"> Dining Rating</div>
+                        </div>
+                    </div>
+                    <div className="text-gray-500 pt-4">
+                        {restaurant.desc}
+                    </div>
+                    <div className="text-gray-400">
+                        {restaurant.address}
+                    </div>
+                    <div className="flex pt-2">
+                    <div className="text-red-300 pr-3"> Open Now </div>
+                    <div>11:30am – 11pm (Today)</div>
+                    </div>
                 </div>
-                <div className="text-gray-500 pt-4">
-                    {restaurant.desc}
-                </div>
-                <div className="text-gray-400">
-                    {restaurant.address}
-                </div>
-                <div className="flex pt-2">
-                <div className="text-red-300 pr-3"> Open Now </div>
-                <div>11:30am – 11pm (Today)</div>
-                </div>
-                
+
+
+
 
                 <div className="flex pt-8">
                     <div className="w-2/3 overflow-y-auto no-scrollbar" style={{ maxHeight: '100vh' }}>

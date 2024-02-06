@@ -2,8 +2,14 @@
 import { useNavigate } from "react-router-dom"
 import { StarRating } from "./StarRating"
 
-
-export function CollectionsCardSmall({title,rating,desc, imgURL, linkTo}){
+interface CollectionCardSmallProps{
+    title: string;
+    rating: string;
+    desc: string;
+    imgURL: string;
+    linkTo: string;
+}
+export function CollectionsCardSmall({title ,rating,desc, imgURL, linkTo}:CollectionCardSmallProps){
     const navigate=useNavigate();
     return(
         

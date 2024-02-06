@@ -1,5 +1,4 @@
 
-import hero from '../assets/hero.jpg'
 import { ExploreOptions } from '../components/ExploreOptions'
 import { Footer } from '../components/Footer'
 import { GetTheApp } from '../components/GetTheApp'

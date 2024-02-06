@@ -2,6 +2,7 @@ import RestDetails from "../../../../backend/Collections/CollectionsSub/BestLuxu
 import { Appbar } from "../../components/Appbar"
 import { ExploreOptions } from "../../components/ExploreOptions"
 import { Footer } from "../../components/Footer"
+import { CollectionsCardSmall } from "../../miniComponents/CollectionsCardSmall"
 
 export function ClassicBiryaniPlaces(){
     return(
@@ -44,7 +45,8 @@ function ExportRestList(){
     return(
         <div className="grid grid-cols-2 md:grid-cols-4">
             {RestDetails.map(x=>(
-                <div className="p-2"><CollectionsCardSmall
+                <div className="p-2">
+                    <CollectionsCardSmall
                     title={x.title}
                     rating={x.rating}
                     desc={x.desc}

@@ -4,8 +4,16 @@ import { Appbar } from "../components/Appbar";
 import { Footer } from "../components/Footer";
 import coll1 from "../assets/coll1.jpg"
 import { StarRating } from "../miniComponents/StarRating";
+import { useEffect, useState } from "react";
+import { CollectionsCardSmall } from "../miniComponents/CollectionsCardSmall";
 
 export function RestaurantName(){
+
+    const[allRestLen, setAllRestLen]=useState(0);
+    useEffect(()=>{
+        setAllRestLen(AllRestaurants.length);
+    },[])    
+
     const {restaurantName}=useParams();
     const restaurant=AllRestaurants.find((r)=> r.name==restaurantName);
     // console.log(restaurantName)
@@ -14,7 +22,6 @@ export function RestaurantName(){
             <div>Page Not Found</div>
         )
     }
-
     return(
         <div className="flex">
             <div className=" md:w-2/12"></div>
@@ -67,6 +74,11 @@ export function RestaurantName(){
                             <RenderWhatPeopleSay prop={restaurantName}></RenderWhatPeopleSay>
                             <RenderAverageCost prop={restaurantName}></RenderAverageCost>
                             <RenderMoreInfo prop={restaurantName}></RenderMoreInfo>
+
+                            <RenderSimilarRestaurant prop={17}></RenderSimilarRestaurant>
+
+                            <OurSponcers></OurSponcers>
+
                             <RenderReviewHighlights prop={restaurantName}></RenderReviewHighlights>
                             <AreYouAFoodBlogger></AreYouAFoodBlogger>
                             <HelpUsMakeZomatoBetter></HelpUsMakeZomatoBetter>
@@ -120,9 +132,6 @@ function RenderCuisines({prop}){
     )
 }
 
-
-
-
 function RenderWhatPeopleSay({prop}){
     const cuisines=AllRestaurants.find((r)=> prop===r.name);
     
@@ -155,7 +164,6 @@ function RenderAverageCost({prop}){
     )
 }
 
-
 function RenderMoreInfo({prop}){
     const cuisines=AllRestaurants.find((r)=> r.name==prop);
     const arr=cuisines?.moreInfo;
@@ -181,7 +189,6 @@ function RenderMoreInfo({prop}){
         </div>
     )
 }
-
 
 function RenderReviewHighlights({prop}){
     const cuisines=AllRestaurants.find((r)=> r.name===prop)
@@ -210,6 +217,7 @@ function RenderReviewHighlights({prop}){
         </div>
     )
 }
+
 function RenderMapComponent({prop}){
     const restaurant=AllRestaurants.find((r)=> prop===r.name)
     const phoneNumber=restaurant?.call
@@ -231,8 +239,6 @@ function RenderMapComponent({prop}){
         </div>
     )
 }
-
-
 
 function HelpUsMakeZomatoBetter(){
     return(
@@ -280,7 +286,6 @@ function HelpUsMakeZomatoBetter(){
     )
 }
 
-
 function AreYouAFoodBlogger(){
     return(
         <div className="py-6">
@@ -288,6 +293,69 @@ function AreYouAFoodBlogger(){
                 <div className="p-4">
                     <div>Are you a food blogger</div>
                     <a className="text-red-400" style={{display: "table-cell"}} href="https://www.zomato.com/spoonbacks/19267065" target="_blank">Add a Zomato spoonback to your blog</a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function RenderSimilarRestaurant({prop}){
+    const rand=Math.floor(Math.random()*(prop-1));
+
+    const temp1=AllRestaurants[rand];
+    const temp2=AllRestaurants[(rand+1)%(prop-1)];
+    // const temp2=AllRestaurants[prop+1];
+    return(
+        <div>
+            <div className="text-xl pt-8 pb-2">
+                Similar Restaurant
+            </div>
+            <div className="flex">
+                <div className="pr-1">
+                    <CollectionsCardSmall
+                    title={temp1.name}
+                    rating={temp1.rating}
+                    desc={temp1.desc}
+                    imgURL={temp1.img}
+                    linkTo={`/restaurant/${temp1.name}`}
+                    ></CollectionsCardSmall>
+                </div>
+                <div className="pl-1 pr-2">
+                    <CollectionsCardSmall
+                    title={temp2.name}
+                    rating={temp2.rating}
+                    desc={temp2.desc}
+                    imgURL={temp2.img}
+                    linkTo={`/restaurant/${temp2.name}`}
+                    ></CollectionsCardSmall>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function OurSponcers(){
+    return(
+        <div>
+            <div className="text-lg pt-8 pb-2 text-gray-500">
+                OUR SPONCORS
+            </div>
+            <div className="flex">
+                <div className="pr-1">
+                    <CollectionsCardSmall
+                    title={"Fat Tiger"}
+                    rating={"3.8"}
+                    desc={"Shake, Beverages, Momos, Burger, Pizza, Fast Food"}
+                    imgURL={"https://b.zmtcdn.com/data/pictures/2/20560132/dd68210e23cc0f053659be394ec7c071.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"}
+                    ></CollectionsCardSmall>
+                </div>
+                <div className="pl-1 pr-2">
+                    <CollectionsCardSmall
+                    title={"Fat Tiger"}
+                    rating={"3.7"}
+                    desc={"Shake, Beverages, Momos, Burger, Pizza, Fast Food"}
+                    imgURL={"https://b.zmtcdn.com/data/reviews_photos/af6/cbb895c6c6460b143295f8144ddf2af6_1676609898.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"}
+                    ></CollectionsCardSmall>
                 </div>
             </div>
         </div>

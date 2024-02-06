@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import {AllRestaurants} from "../../../backend/AllRestaurant"
 import { Appbar } from "../components/Appbar";
 import { Footer } from "../components/Footer";
-import coll1 from "../assets/coll1.jpg"
 import { StarRating } from "../miniComponents/StarRating";
 import { useEffect, useState } from "react";
 import { CollectionsCardSmall } from "../miniComponents/CollectionsCardSmall";
@@ -13,7 +12,7 @@ export function RestaurantName(){
     useEffect(()=>{
         setAllRestLen(AllRestaurants.length);
     },[])    
-
+    console.log(allRestLen);
     const {restaurantName}=useParams();
     const restaurant=AllRestaurants.find((r)=> r.name==restaurantName);
     // console.log(restaurantName)
@@ -180,7 +179,7 @@ function RenderMoreInfo({prop}){
             </div>
             <div className="grid grid-cols-2">
                 {arr?.map((info,index)=>(
-                    <div className="flex justify-between">
+                    <div key={index} className="flex justify-between">
                         <div className="flex pt-2">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#119199" width="20" height="25" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" className="sc-rbbb40-0 iRDDBk"><path d="M1.5 10C1.5 5.3125 5.3125 1.5 10 1.5C14.6875 1.5 18.5 5.3125 18.5 10C18.5 14.6875 14.6875 18.5 10 18.5C5.3125 18.5 1.5 14.6875 1.5 10ZM0 10C0 15.5 4.5 20 10 20C15.5 20 20 15.5 20 10C20 4.5 15.5 0 10 0C4.5 0 0 4.5 0 10ZM13.75 7.25L8.75 12.1875L6.25 9.75C5.9375 9.4375 5.5 9.4375 5.1875 9.75C4.875 10 4.875 10.5 5.1875 10.8125L8.1875 13.8125C8.3125 13.9375 8.5 14.0625 8.75 14.0625C8.9375 14.0625 9.125 14 9.25 13.8125L14.75 8.3125C15.0625 8 15.0625 7.5625 14.75 7.25C14.4375 6.9375 14 6.9375 13.75 7.25Z"></path></svg>
@@ -232,7 +231,7 @@ function RenderMapComponent({prop}){
         style={{height:'400px'}}>
             <div className="pt-3 text-xl pb-2">Call</div>
             {phoneNumber?.map((x,index)=>(
-                <div className="text-red-400">{x}</div>
+                <div key={index} className="text-red-400">{x}</div>
             ))}
             <div className="pt-4 text-xl pb-2">Directions</div>
             <img src={"https://maps.zomato.com/php/staticmap?center=20.2844157098,85.8347158134&maptype=zomato&markers=20.2844157098,85.8347158134,pin_res32&sensor=false&scale=2&zoom=16&language=en&size=240x150&size=400x240&size=650x250"}></img>
@@ -352,6 +351,7 @@ function OurSponcers(){
                     rating={"3.8"}
                     desc={"Shake, Beverages, Momos, Burger, Pizza, Fast Food"}
                     imgURL={"https://b.zmtcdn.com/data/pictures/2/20560132/dd68210e23cc0f053659be394ec7c071.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"}
+                    linkTo=""
                     ></CollectionsCardSmall>
                 </div>
                 <div className="pl-1 pr-2">
@@ -360,6 +360,7 @@ function OurSponcers(){
                     rating={"3.7"}
                     desc={"Shake, Beverages, Momos, Burger, Pizza, Fast Food"}
                     imgURL={"https://b.zmtcdn.com/data/reviews_photos/af6/cbb895c6c6460b143295f8144ddf2af6_1676609898.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"}
+                    linkTo=""
                     ></CollectionsCardSmall>
                 </div>
             </div>

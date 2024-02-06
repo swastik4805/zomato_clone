@@ -11,7 +11,7 @@ export function Heropart(){
             setCurIndex((prevIndex)=>
                 (prevIndex+1)%5)
         },5000);
-        // return ()=> clearInterval(intervalId);
+        return ()=> clearInterval(intervalId);
     },[])
 
     return(

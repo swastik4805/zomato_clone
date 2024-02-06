@@ -1,11 +1,11 @@
 import { useMediaQuery } from 'react-responsive';
-import { BrowserRouter as Router, Route, Link, useNavigate } from "react-router-dom";
+import { BrowserRouter as  Link, useNavigate } from "react-router-dom";
 import CollectionList from "../../../backend/Collections/CollectionsList"
 
 
 export function Collections(){
     // const x="https://b.zmtcdn.com/data/collections/a8173c084c01678cd6234dc98ba93ea4_1694690149.jpg?fit=around|858.4000000000001:256&crop=858.4000000000001:256;*,*"
-    const navigate=useNavigate();
+   
     return(
         
         <div  >
@@ -43,8 +43,8 @@ function RenderCollections(){
     const navigate=useNavigate();
     return(
         <div className='p-4 grid grid-cols-2 md:grid-cols-4'>
-            {CollectionList.map(x=>(
-                <div className="p-4" onClick={()=>{
+            {CollectionList.map((x, index)=>(
+                <div key={index} className="p-4" onClick={()=>{
                     navigate(x.navigateTo)
                 }}>
                     <div className={`pt-12 bg-cover bg-center bg-no-repeat rounded-md`}

@@ -1,6 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
-import { BrowserRouter as  Link, useNavigate } from "react-router-dom";
 import CollectionList from "../../../backend/Collections/CollectionsList"
+import { useNavigate } from 'react-router-dom';
 
 
 export function Collections(){

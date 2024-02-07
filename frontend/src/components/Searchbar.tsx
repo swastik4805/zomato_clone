@@ -1,7 +1,7 @@
 export function Searchbar({label}){
     return(
         <form>   
-        <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+        <label className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
         <div className="relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
 
@@ -15,7 +15,7 @@ export function Searchbar({label}){
                 width: '350px', 
                 height: '40px',
             }}
-            className="ps-10 text-sm text-gray-900 rounded-lg dark:text-white " 
+            className="ps-10 text-sm text-gray-900 rounded-lg " 
             placeholder={label} required/>
         </div>
     </form>

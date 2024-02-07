@@ -4,11 +4,11 @@ const Table = ({ props }) => {
     return (
         <div>
             {props.map((item, index) => (
-            <div className="px-1" key={index} style={{ display: 'inline', alignItems: 'center' }}>
+            <div key={index} style={{ display: 'inline', alignItems: 'center' }}>
                 {item.split(" ").map((it, wordIndex) => (
-                    <div className="text-gray-500" key={wordIndex} 
+                    <div className="text-gray-500 pr-1" key={wordIndex}
                     style={{ display: 'inline-flex', alignItems: 'center' }}>
-                        {wordIndex === 0 ? <BsDot/> : " "}
+                        {wordIndex === 0 ? <BsDot style={{height:'13px'}}/> : " "}
                         {it}
                     </div>
                 ))}

@@ -21,7 +21,7 @@ export function DropDownMenu({heading,list}){
                 </button>
             </h2>
             <div id="accordion-collapse-body-1" className={hidden}>
-                <div className=" border border-b-0 border-gray-200 cursor-pointer">
+                <div className=" border border-b-0 p-1 border-gray-200 cursor-pointer">
                     <Table props={list}></Table>
                 </div>
             </div>

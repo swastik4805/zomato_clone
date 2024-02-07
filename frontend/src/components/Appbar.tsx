@@ -6,32 +6,32 @@ export function Appbar(){
   const navigate=useNavigate();
     return(
         <div className="shadow-md">
-            <div  className="flex justify-between pb-2">
+            <div  className="flex justify-between pb-1">
 
-                <div className="pt-3 pl-4 w-1/6 cursor-pointer"
-                onClick={()=>{
-                  navigate("/")
-                }}>
-                    <img style={{width:'100px'}} src={zomato}></img>
+                <div className="pt-3 pl-1 w-2/12 cursor-pointer"
+                  onClick={()=>{
+                    navigate("/")
+                  }}>
+                  <img className="pt-1" style={{width:'100px'}} src={zomato}></img>
                 </div>
 
-                <div className="pl-1 w-4/6 shadow rounded-xl">
+                <div className="pl-1 w-7/12">
                     <Searchbar></Searchbar>
                 </div>
 
-                <div className="w-1/6">
-                    <div className="flex">
-                        <div className="text-md text-gray-400 pt-3 pl-2 cursor-pointer"
-                        onClick={()=>{
-                          alert("hi! This is just a dummy!")
-                        }}>
-                          Log in
+                <div className="w-3/12 pl-1">
+                    <div className="flex md:justify-end">
+                        <div className="text-md text-gray-400 pt-3 text-sm cursor-pointer"
+                          onClick={()=>{
+                            alert("hi! This is just a dummy!")
+                          }}>
+                            Log in
                         </div>
-                        <div className="text-md text-gray-400 pt-3 pl-2 cursor-pointer"
-                        onClick={()=>{
-                          alert("Hi! This is just a dummy!")
-                        }}>
-                          Sign up
+                        <div className="text-md text-gray-400 text-sm pt-3 pl-2 cursor-pointer"
+                          onClick={()=>{
+                            alert("Hi! This is just a dummy!")
+                          }}>
+                            Sign up
                         </div>
                     </div>
                 </div>

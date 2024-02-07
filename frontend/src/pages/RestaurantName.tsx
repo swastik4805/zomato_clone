@@ -227,7 +227,7 @@ function RenderMapComponent({prop}){
     const phoneNumber=restaurant?.call
 
     return(
-        <div className="bg-gray-100 p-4 rounded-xl shadow-lg"
+        <div className="bg-gray-100 p-1 rounded-xl shadow-lg"
         style={{height:'400px'}}>
             <div className="pt-3 text-xl pb-2">Call</div>
             {phoneNumber?.map((x,index)=>(

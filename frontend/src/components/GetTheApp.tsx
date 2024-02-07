@@ -22,7 +22,8 @@ export function GetTheApp(){
 
 function GetAppCard(){
     const [emailOrPhone, setEmailOrPhone] = useState('email');
-
+    const [value, setValue]=useState("");
+    
     const handleChange = (event) => {
         setEmailOrPhone(event.target.value)
     }
@@ -60,7 +61,6 @@ function GetAppCard(){
             </div>
 
 
-
             <div className="flex">
                 <form>   
                     <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -68,29 +68,35 @@ function GetAppCard(){
                         
                         <input type="search" id="default-search" 
                         style={{ width: '250px', height: '40px' }}
-                        className="pl-2 text-sm text-gray-900 rounded-lg dark:text-white border" 
+                        onChange={(e)=>{
+                            setValue(e.target.value);
+                        }}
+                        className="pl-2 text-sm text-gray-900 rounded-lg dark:text-black border" 
                         placeholder={emailOrPhone} required/>
                     </div>
                 </form>
                 <div className="pl-2">
-                    <button className="bg-red-400 rounded-md p-2 text-white">
+                    <button className="bg-red-400 rounded-md p-2 text-white" onClick={()=>{
+                        alert("OK. We will mail you the link on "+value+" once we go into production. In the mean time, you can use the button below! Peace!")
+                    }}>
                         share app link
                     </button>
                 </div>
             </div>
 
 
-
-            <div className="text-sm text-gray-400 p-4">
+            <div className="text-sm text-gray-400 pt-6 pl-4">
                 Download app from
             </div>
 
 
-
-
             <div className="flex p-4">
-                <img className="pr-1" style={{width:'100px', height:'30px'}} src={playstore}></img>
-                <img className="pl-1" style={{width:'100px', height:'30px'}} src={appstore}></img>
+                <img className="pr-1" style={{width:'100px', height:'30px'}} src={playstore} onClick={()=>{
+                    window.open("https://play.google.com/store/apps/details?id=com.application.zomato&hl=en_IN&gl=US","_blank");
+                }}></img>
+                <img className="pl-1" style={{width:'100px', height:'30px'}} src={appstore} onClick={()=>{
+                    window.open("https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896","_blank");
+                }}></img>
             </div>
         </div>
     )

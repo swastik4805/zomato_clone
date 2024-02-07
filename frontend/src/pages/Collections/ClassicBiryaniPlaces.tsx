@@ -1,4 +1,4 @@
-import RestDetails from "../../../../backend/Collections/CollectionsSub/BestLuxuryDiningComp"
+import RestDetails from "../../../../backend/Collections/CollectionsSub/ClassicBiryaniPlaces"
 import { Appbar } from "../../components/Appbar"
 import { ExploreOptions } from "../../components/ExploreOptions"
 import { Footer } from "../../components/Footer"
@@ -13,14 +13,14 @@ export function ClassicBiryaniPlaces(){
 
             <div className="md:w-8/12">
                 
-                <div className="bg-[url('./assets/coll1.jpg')]">
+                <div className="bg-[url('./assets/coll6.jpg')]">
 
                     <div className="p-4 pb-6 shadow-xl bg-gradient-to-t from-black rounded-md">
                         <div className="pt-48 text-3xl text-white">
-                            7 Best Luxury Dining Places
+                        8 Classic Biryani Places
                         </div>
                         <div className="text-white">
-                        Restaurants that are unmatched on multiple fronts with luxurious indoor settings and extravagant menus
+                        These biryani spots in the city hit all the right notes, authenticity, aroma and flavourful meat so tender that it falls off the bone.
                         </div>
                     </div>
                 </div>
@@ -32,11 +32,12 @@ export function ClassicBiryaniPlaces(){
                 <ExploreOptions></ExploreOptions>
 
                 <br></br>
-                <Footer></Footer>
+                
 
             </div>
             <div className="md:w-2/12"></div>
         </div>
+        <Footer></Footer>
         </div>
     )
 }

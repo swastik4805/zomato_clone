@@ -34,11 +34,12 @@ export function BestLuxuryDiningPLaces(){
                 <ExploreOptions></ExploreOptions>
 
                 <br></br>
-                <Footer></Footer>
+                
 
             </div>
             <div className="md:w-2/12"></div>
         </div>
+        <Footer></Footer>
         </div>
     )
 }

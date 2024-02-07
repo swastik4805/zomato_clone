@@ -25,7 +25,7 @@ export function Footer(){
                 <br></br>
                 <br></br>
                 <div>
-                    <div className="flex flex-wrap md:justify-center  pb-4 px-2">
+                    <div className="flex flex-wrap md:justify-between pb-4 px-2">
                         <div className="px-4"><Lists title={"ABOUT ZOMATO"} list={list1}></Lists></div>
                         <div className="px-4"><Lists title={"ZOOMAVERSE"} list={list2}></Lists></div>
 

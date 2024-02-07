@@ -10,7 +10,7 @@ export function Heropart(){
         const intervalId=setInterval(()=>{
             setCurIndex((prevIndex)=>
                 (prevIndex+1)%5)
-        },5000);
+        },2000);
         return ()=> clearInterval(intervalId);
     },[])
 

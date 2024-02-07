@@ -26,17 +26,10 @@ export function BestBarsAndPubs(){
                     </div>
                 </div>
                 <br></br>
-                
                 <ExportRestList></ExportRestList>
-
                 <br></br>
                 <ExploreOptions></ExploreOptions>
-
                 <br></br>
-                
-                
-                
-
             </div>
             <div className="md:w-2/12"></div>
         </div>

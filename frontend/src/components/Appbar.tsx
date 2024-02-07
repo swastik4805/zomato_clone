@@ -15,7 +15,7 @@ export function Appbar(){
                   <img className="pt-1" style={{width:'100px'}} src={zomato}></img>
                 </div>
 
-                <div className="pl-1 w-7/12">
+                <div className="pl-1 pt-1 w-7/12">
                     <Searchbar></Searchbar>
                 </div>
 

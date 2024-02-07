@@ -237,8 +237,8 @@ function RenderMapComponent({prop}){
             <img src={"https://maps.zomato.com/php/staticmap?center=20.2844157098,85.8347158134&maptype=zomato&markers=20.2844157098,85.8347158134,pin_res32&sensor=false&scale=2&zoom=16&language=en&size=240x150&size=400x240&size=650x250"}></img>
             <div>{restaurant.address}</div>
             <div className="flex justify-between pt-6">
-                <button className="bg-white px-3 py-1 rounded-lg border-solid shadow">Copy</button>
-                <button className="bg-white px-3 py-1 rounded-lg border-solid shadow">Directions</button>
+                <button className="bg-white py-1 rounded-lg border-solid shadow">Copy</button>
+                <button className="bg-white py-1 rounded-lg border-solid shadow">Directions</button>
             </div>
         </div>
     )

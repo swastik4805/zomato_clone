@@ -19,7 +19,7 @@ export function Appbar(){
                     <Searchbar></Searchbar>
                 </div>
 
-                <div className="w-3/12 pl-1">
+                <div className="w-3/12">
                     <div className="flex md:justify-end">
                         <div className="text-md text-gray-400 pt-3 text-sm cursor-pointer"
                           onClick={()=>{

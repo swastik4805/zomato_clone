@@ -65,7 +65,7 @@ export function RestaurantName(){
 
 
                     <div className="pt-8 flex">
-                        <div className="w-2/3 overflow-y-auto no-scrollbar" style={{ maxHeight: '100vh' }}>
+                        <div className="w-2/3 overflow-y-auto no-scrollbar">
                             <div>Menu</div>
                             <div className="flex">
                                 <div><img className="rounded-lg pr-6" src={restaurant.menuImage1}></img></div>

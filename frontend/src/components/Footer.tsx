@@ -15,7 +15,7 @@ export function Footer(){
             </div>
 
             <div className="w-8/12 pt-6">
-                <div className="flex justify-between px-4">
+                 <div className="flex justify-between px-4">
                     <div style={{width:'150px'}}><img src={zomato}></img></div>
                     <div>
                         <DropDown></DropDown>
@@ -25,7 +25,7 @@ export function Footer(){
                 <br></br>
                 <br></br>
                 <div>
-                    <div className="flex justify-center pb-4 px-2">
+                    <div className="flex flex-wrap md:justify-center  pb-4 px-2">
                         <div className="px-4"><Lists title={"ABOUT ZOMATO"} list={list1}></Lists></div>
                         <div className="px-4"><Lists title={"ZOOMAVERSE"} list={list2}></Lists></div>
 

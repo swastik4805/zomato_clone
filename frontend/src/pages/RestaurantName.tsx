@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { StarRating } from "../miniComponents/StarRating";
 import { useEffect, useState } from "react";
 import { CollectionsCardSmall } from "../miniComponents/CollectionsCardSmall";
+import { ExploreOptions } from "../components/ExploreOptions";
 
 export function RestaurantName(){
 
@@ -63,7 +64,7 @@ export function RestaurantName(){
 
 
 
-                    <div className="flex pt-8">
+                    <div className="pt-8 flex">
                         <div className="w-2/3 overflow-y-auto no-scrollbar" style={{ maxHeight: '100vh' }}>
                             <div>Menu</div>
                             <div className="flex">
@@ -93,10 +94,9 @@ export function RestaurantName(){
                     </div>
                 </div>
                 
-                {/* <ExportRestLisy></ExportRestLisy> */}
 
                 <br></br>
-                {/* <ExploreOptions></ExploreOptions> */}
+                <ExploreOptions></ExploreOptions>
 
                 <br></br>
                 
@@ -293,7 +293,7 @@ function HelpUsMakeZomatoBetter(){
 function AreYouAFoodBlogger(){
     return(
         <div className="py-6">
-            <div className="bg-gray-100 rounded-lg" style={{width:'350px'}}>
+            <div className="bg-gray-100 rounded-lg">
                 <div className="p-4">
                     <div>Are you a food blogger</div>
                     <a className="text-red-400" style={{display: "table-cell"}} href="https://www.zomato.com/spoonbacks/19267065" target="_blank">Add a Zomato spoonback to your blog</a>
